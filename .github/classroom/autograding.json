@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Compiles",
+      "setup": "dotnet restore Durer.csproj",
+      "run": "dotnet build Durer.csproj",
+      "timeout": 30,
+      "points": 1
+    },
+    {
+      "name": "Proyección completa del cubo",
+      "run": "dotnet run --project Durer.csproj",
+      "timeout": 10,
+      "points": 2,
+      "expectedOutput": "CUBE:\nProjected vertices:\n[0] (-0.2, -0.2)\n[1] (-0.2, 0.2)\n[2] (0.2, 0.2)\n[3] (0.2, -0.2)\n[4] (-0.14285715, -0.14285715)\n[5] (-0.14285715, 0.14285715)\n[6] (0.14285715, 0.14285715)\n[7] (0.14285715, -0.14285715)\nScreen coordinates:\n[0] (358.4, 358.4)\n[1] (358.4, 153.6)\n[2] (153.6, 153.6)\n[3] (153.6, 358.4)\n[4] (329.14285, 329.14285)\n[5] (329.14285, 182.85715)\n[6] (182.85715, 182.85715)\n[7] (182.85715, 329.14285)"
+    },
+    {
+      "name": "Proyección completa de la pirámide",
+      "run": "dotnet run --project Durer.csproj",
+      "timeout": 10,
+      "points": 2,
+      "expectedOutput": "PYRAMID:\nProjected vertices:\n[0] (0.2, -0.2)\n[1] (-0.2, -0.2)\n[2] (-0.14285715, -0.14285715)\n[3] (0.14285715, -0.14285715)\n[4] (0, 0.16666667)\nScreen coordinates:\n[0] (153.6, 358.4)\n[1] (358.4, 358.4)\n[2] (329.14285, 329.14285)\n[3] (182.85715, 329.14285)\n[4] (256, 170.66666)"
+    }
+  ]
+}
